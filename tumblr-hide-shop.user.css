@@ -1,0 +1,29 @@
+/* ==UserStyle==
+@name         Tumblr : Remove Shop Button
+@version      1.2
+@namespace    userstyles.world/user/lensdeer
+@description  Remove shop icon from Tumblr's header and Payment & Purchases from the account menu.
+@author       lensdeer
+@license      OQL (https://oql.avris.it/license/v1.1)
+@supportURL   http://github.com/MarshDeer/tumblr-hide-shop/issues/new
+
+@preprocessor stylus
+@var checkbox hide-header 'Remove shop button from header' 1
+@var checkbox hide-paypur 'Remove "Payment & Purchases" from the Account menu' 1
+==/UserStyle== */
+
+@-moz-document domain("tumblr.com") {
+/* Remove shop button from header */
+	if hide-header {
+		.KTRcB:nth-child(4) {
+			display:	none;
+		}
+	}
+
+/* Remove Payment & Purchases from account menu */
+	if hide-paypur {
+		.IYrO9:nth-child(5) {
+			display:	none;
+		}
+	}
+}
