@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Tumblr : Remove Shop Button
-@version      1.6.2
+@version      1.6.3
 @namespace    userstyles.world/user/lensdeer
 @description  Remove shop icon from Tumblr's header and related items from the account menu.
 @author       lensdeer
@@ -41,7 +41,7 @@
 		.m5KTc:nth-child(1) {
 			display:	none;
 		}
-		.m5KTc:last-child {
+		.m5KTc:only-child {
 			display:	flex;
 		}
 	}
