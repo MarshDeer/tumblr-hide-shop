@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Tumblr : Remove Shop Button
-@version      1.4
+@version      1.5
 @namespace    userstyles.world/user/lensdeer
 @description  Remove shop icon from Tumblr's header and related items from the account menu.
 @author       lensdeer
@@ -11,6 +11,7 @@
 @var checkbox hide-header 'Remove shop button from header' 1
 @var checkbox hide-paypur 'Remove "Payment & Purchases" from the Account menu' 1
 @var checkbox hide-gifts 'Remove "Gifts" from the Account menu' 1
+@var checkbox hide-monetization 'Remove post monetization (blaze, tips) from post footer'
 ==/UserStyle== */
 
 @-moz-document domain("tumblr.com") {
@@ -31,6 +32,13 @@
 /* Remove Gifts from account menu */
 	if hide-gifts {
 		.IYr09:nth-child(6) {
+			display:	none;
+		}
+	}
+
+/* Hide post monetization features from post footer */
+	if hide-monetization {
+		.m5KTc:nth-child(1) {
 			display:	none;
 		}
 	}
